@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Mandala 3</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    /* Memastikan peta mengisi wadah dengan benar */
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+    /* Style untuk Hamburger Icon */
+    .hamburger-icon div {
+        transition: all 0.3s ease-in-out;
+    }
+    .open .line-1 {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .open .line-2 {
+        opacity: 0;
+    }
+    .open .line-3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+</style>
+<script>
+      
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Menambahkan font-family kustom
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    // Menambahkan warna kustom agar lebih sesuai dengan gambar
+                    colors: {
+                        'custom-bg': '#FFFBF0', // Latar belakang krem muda
+                        'custom-yellow': '#FDB813', // Warna kuning/emas untuk teks
+                        'custom-icon-bg': '#FDE047', // Latar belakang ikon (Tailwind 'yellow-400')
+                    }
+                }
+            }
+        }
+    </script>
+
+<body class="bg-[#FFF4E0] text-black font-sans">
+ <!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-28 py-6 bg-[#FFF4E0]/95 backdrop-blur shadow-sm">
+  <h1 class="text-2xl font-semibold">MANDALA 3</h1>
+  <ul class="flex gap-10 text-lg font-medium">
+    <li><a href="#hero" class="hover:text-purple-500">Home</a></li>
+    <li><a href="#experiences" class="hover:text-purple-500">Experience</a></li>
+    <li><a href="#Skill" class="hover:text-purple-500">Skill</a></li>
+    <li><a href="#about" class="hover:text-purple-500">About</a></li>
+  </ul>
+  <button class="bg-black text-white px-6 py-2 rounded-sm hover:bg-gray-800" a href="#Contact">
+    Contact
+  </button>
+  <div id="hamburger-button" class="md:hidden space-y-2 cursor-pointer z-20 hamburger-icon">
+            <div class="line-1 w-8 h-0.5 bg-black"></div>
+            <div class="line-2 w-8 h-0.5 bg-black"></div>
+            <div class="line-3 w-8 h-0.5 bg-black"></div>
+        </div>
+
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[#FFF4E0] flex flex-col items-center justify-center space-y-8 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-10">
+            <ul class="flex flex-col gap-8 text-3xl font-bold text-center">
+                <li><a href="#hero" class="hover:text-purple-500 mobile-nav-link">Home</a></li>
+                <li><a href="#experiences" class="hover:text-purple-500 mobile-nav-link">Experience</a></li>
+                <li><a href="#Skill" class="hover:text-purple-500 mobile-nav-link">Skill</a></li>
+                <li><a href="#about" class="hover:text-purple-500 mobile-nav-link">About</a></li>
+            </ul>
+            <button class="bg-black text-white px-8 py-3 text-xl rounded-sm hover:bg-gray-800 transition duration-300" onclick="scrollToSection('#Contact'); document.getElementById('mobile-menu').classList.add('-translate-x-full'); document.getElementById('hamburger-button').classList.remove('open');">
+                Contact
+            </button>
+        </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="flex justify-between items-center px-28 py-20">
+    <!-- Left Text -->
+    <div class="max-w-xl">
+      <p class="text-lg font-semibold mb-2">Hello and welcome,</p>
+      <h1 class="text-6xl font-bold leading-tight mb-4">
+        This <span class="text-purple-500">portfolio</span> is a<br />
+        showcase of my work and
+        <span class="text-purple-500">dedication
+      </h1>
+      <p class="text-gray-700 mb-6">
+        Take a moment to browse, and feel free to connect
+      </p>
+      <button class="bg-[#FFC107] text-white font-semibold px-6 py-3 text-lg rounded-sm hover:bg-[#ffb300]">
+        Hire Me
+      </button>
+    </div>
+    
+    <!-- Right Image Card -->
+   <div class="relative w-full max-w-sm mx-auto">
+    <div class="w-96 h-[526px] relative">
+  <div class="w-96 h-72 left-[23.68px] top-[246.61px] absolute bg-black rounded-[41px] outline outline-2 outline-black"></div>
+  <div class="w-96 h-72 left-[23.68px] top-[153.70px] absolute bg-amber-400 rounded-[41px] outline outline-2 outline-black"></div>
+  <img class="w-64 h-[461.83px] left-[67.21px] top-0 absolute" src="aset/visual hook.png" />
+  <div class="w-96 h-24 left-[401px] top-[454.46px] absolute origin-top-left rotate-[169.62deg] bg-white rounded-[65px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] border-[5px] border-violet-500"></div>
+  <div class="w-80 h-8 left-[71px] top-[453.41px] absolute origin-top-left rotate-[-10.38deg] justify-start text-black text-2xl font-bold font-['Roboto']">CAN YOU CATCH THAT?</div>
+  <div class="w-12 h-12 left-0 top-[456.32px] absolute bg-yellow-400 rounded-[37.50px] border-2 border-black"></div>
+  <div class="w-2.5 h-2.5 left-[18.42px] top-[474.77px] absolute bg-black rounded-[37.50px]"></div>
+</div>
+</div>
+  </section>
+
+    <!-- Experience Section -->
+  <section id="experiences" class="bg-white container mx-auto py-44 px-6 md:px-12">
+        
+        <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between md:items-start mb-12">
+            <div class="mb-6 md:mb-0">
+                <span class="block w-20 h-0.5 bg-gray-900 mb-4"></span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    My <span class="text-purple-600">Experience</span>
+                </h2>
+            </div>
+            
+            <div class="max-w-xs">
+                <p class="text-sm md:text-base text-gray-600">
+                    This page contains documentation of the activities and experiences I have gained
+                </p>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+            
+            <div>
+                <div class="mb-4">
+                    <img src="aset/mc 2.png" 
+                         alt="Master Of Ceremony" 
+                         class="w-full h-auto object-cover border-4 border-yellow-400">
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                        Master Of Ceremony <br> In SMART CENTER
+                    </h3>
+                    <a href="#" class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center shrink-0 hover:bg-purple-700 transition-colors">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <div class="mb-4">
+                    <img src="aset/gratia.png" 
+                         alt="Junior Web Developer" 
+                         class="w-full h-auto object-cover border-4 border-yellow-400">
+                </div>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                        Junior Web Developer
+                    </h3>
+                    <a href="#" class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center shrink-0 hover:bg-purple-700 transition-colors">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <div class="mb-4">
+                    <img src="aset/uiux.png" 
+                         alt="UI/UX Training" 
+                         class="w-full h-auto object-cover border-4 border-yellow-400">
+                </div >
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">
+                        UI/UX Training
+                    </h3>
+                    <a href="#" class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center shrink-0 hover:bg-purple-700 transition-colors">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+    </section>
+
+    <!-- Skills Section -->
+    <section id="Skill" class="bg-custom-bg font-sans text-black">
+
+    <main class="flex items-center justify-center min-h-screen py-16 px-6">
+        <div class="container max-w-6xl mx-auto">
+            
+            <div class="mb-12">
+                <span class="block w-16 h-1 bg-black mb-4"></span>
+                <h1 class="text-4xl md:text-5xl font-bold text-black">
+                    The <span class="italic text-custom-yellow">Skill I Have</span>
+                </h1>
+            </div>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white p-8 rounded-3xl shadow-lg flex flex-col">
+                    <div class="w-16 h-16 bg-custom-icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path fill-rule="evenodd" d="M9 2.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 9 2.25Zm1.765 1.963a.75.75 0 0 1 .53 1.298l-1.237 1.237a.75.75 0 0 1-1.06 0l-1.237-1.237a.75.75 0 1 1 1.06-1.06l.707.707.707-.707a.75.75 0 0 1 .53-.238Zm4.47 0a.75.75 0 0 1 .53.238l.707.707.707-.707a.75.75 0 1 1 1.06 1.06l-1.237 1.237a.75.75 0 0 1-1.06 0l-1.237-1.237a.75.75 0 0 1 .53-1.298ZM15 2.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 15 2.25ZM18 9a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 18 9Zm1.765 1.963a.75.75 0 0 1 .53 1.298l-1.237 1.237a.75.75 0 0 1-1.06 0l-1.237-1.237a.75.75 0 1 1 1.06-1.06l.707.707.707-.707a.75.75 0 0 1 .53-.238Zm-4.47 0a.75.75 0 0 1 .53.238l.707.707.707-.707a.75.75 0 1 1 1.06 1.06l-1.237 1.237a.75.75 0 0 1-1.06 0l-1.237-1.237a.75.75 0 0 1 .53-1.298ZM6 9a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 6 9Zm1.765 1.963a.75.75 0 0 1 .53 1.298l-1.237 1.237a.75.75 0 0 1-1.06 0L4.76 11.2a.75.75 0 1 1 1.06-1.06l.707.707.707-.707a.75.75 0 0 1 .53-.238Zm-4.47 0a.75.75 0 0 1 .53.238l.707.707.707-.707a.75.75 0 1 1 1.06 1.06l-1.237 1.237a.75.75 0 0 1-1.06 0L.76 11.2a.75.75 0 1 1 1.06-1.06l.707.707.707-.707a.75.75 0 0 1 .53-.238ZM9 15.75a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm1.765 1.963a.75.75 0 0 1 .53 1.298l-1.237 1.237a.75.75 0 0 1-1.06 0l-1.237-1.237a.75.75 0 1 1 1.06-1.06l.707.707.707-.707a.75.75 0 0 1 .53-.238Zm4.47 0a.75.75 0 0 1 .53.238l.707.707.707-.707a.75.75 0 1 1 1.06 1.06l-1.237 1.237a.75.75 0 0 1-1.06 0l-1.237-1.237a.75.75 0 0 1 .53-1.298ZM15 15.75a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold text-black mb-2">UI/UX Design</h3>
+                        <p class="text-gray-600">Creating intuitive and engaging user experiences</p>
+                    </div>
+                    <a href="#" class="flex items-center gap-2 font-semibold text-black mt-6">
+                        see more
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-3xl shadow-lg flex flex-col">
+                    <div class="w-16 h-16 bg-custom-icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 17.5l-4.147.957.957-4.147L16.862 4.487Z" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold text-black mb-2">Illustration Design</h3>
+                        <p class="text-gray-600">Turning ideas into expressive visual stories</p>
+                    </div>
+                    <a href="#" class="flex items-center gap-2 font-semibold text-black mt-6">
+                        see more
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-3xl shadow-lg flex flex-col">
+                    <div class="w-16 h-16 bg-custom-icon-bg rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm1.5 0a1.5 1.5 0 0 1 1.5-1.5h12a1.5 1.5 0 0 1 1.5 1.5v2.25h-15V6zm0 3.75h15v8.25a1.5 1.5 0 0 1-1.5 1.5h-12a1.5 1.5 0 0 1-1.5-1.5v-8.25z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold text-black mb-2">Web Design</h3>
+                        <p class="text-gray-600">Building modern and responsive digital interfaces</p>
+                    </div>
+                    <a href="#" class="flex items-center gap-2 font-semibold text-black mt-6">
+                        see more
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                    </a>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="bg-custom-yellow font-sans">
+
+    <main class="flex items-center justify-center min-h-screen py-20 px-6">
+
+         <div class="container max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+              <div class="w-[594px] h-[690px] relative">
+              <div class="w-[554px] h-[554px] left-[18px] top-[136px] absolute bg-orange-100 rounded-full"></div>
+              <img class="w-[594px] h-[689px] left-0 top-0 absolute rounded-[353px]" src="aset/aboutme.png" />
+              <div class="w-32 h-12 left-[213.37px] top-[660.85px] absolute origin-top-left rotate-[-153.38deg] bg-amber-400 rounded-[65px] border-2 border-black"></div>
+              <div class="left-[129.24px] top-[583px] absolute origin-top-left rotate-[25.72deg] justify-start text-black text-base font-bold font-['Roboto']">ui/ux Design</div>
+              <div class="w-32 h-11 left-[229.58px] top-[632px] absolute origin-top-left rotate-[0.77deg] bg-violet-500 rounded-[65px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] border-2 border-black"></div>
+              <div class="w-32 h-12 left-[346px] top-[624.72px] absolute origin-top-left rotate-[-24.99deg] bg-amber-400 rounded-[65px] border-2 border-black"></div>
+              <div class="w-20 h-5 left-[375.02px] top-[625.84px] absolute origin-top-left rotate-[-24.69deg] justify-start text-black text-base font-bold font-['Roboto']">ilustration</div>
+              <div class="w-24 h-5 left-[245.66px] top-[644px] absolute origin-top-left rotate-[1.90deg] justify-start text-white text-base font-bold font-['Roboto']">Web Design</div>
+            </div>
+               
+            
+            <div class="text-black">
+                
+                <span class="block w-16 h-1 bg-black mb-4"></span>
+                
+                <h2 class="text-3xl font-bold mb-4">About me</h2>
+                
+                <h1 class="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                    <span class="text-white">Who is </span>
+                    <span class="text-custom-purple">Iqmal Sulaiman?</span>
+                </h1>
+                
+                <p class="text-lg text-gray-800 mb-10">
+                    A passionate Information Systems student who loves technology, design, and data. Focused on building creative and efficient digital solutions.
+                </p>
+                
+                <div class="grid grid-cols-3 gap-6">
+                    <div>
+                        <span class="text-5xl font-bold text-purple-light">100+</span>
+                        <p class="text-gray-700 font-medium">Project complete</p>
+                    </div>
+                    <div>
+                        <span class="text-5xl font-bold text-purple-light">40+</span>
+                        <p class="text-gray-700 font-medium">Industry covered</p>
+                    </div>
+                    <div>
+                        <span class="text-5xl font-bold text-purple-light">10+</span>
+                        <p class="text-gray-700 font-medium">Years Of Experience</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+      </section>
+
+    <!-- Tools Section -->
+     
+      <section class="items-center bg-white py-20 font-sans flex items-center justify-center">
+    <div class="container max-w-6xl mx-auto text-center px-4">
+        
+        <div class="mb-12">
+            <p class="text-black text-sm uppercase tracking-widest mb-2 flex items-center justify-center">
+                <span class="w-8 h-px bg-black mr-2"></span>
+                Tools i use in My Work
+            </p>
+            <h2 class="text-4xl sm:text-5xl font-extrabold italic text-amber-500">
+                Exploring The Tools
+            </h2>
+        </div>
+        
+       <section class="flex justify-center items-center min-h-screen bg-white py-20 font-sans">
+    <div class="container max-w-6xl mx-auto px-4">
+        
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8 lg:gap-10 justify-items-center">
+            
+            <div class="w-full max-w-xs flex flex-col items-center justify-start h-80 bg-orange-100 rounded-[105px] pt-12 pb-6 shadow-lg">
+                <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center mb-6">
+                    <img class="w-24 h-24" src="aset/image 1.png" alt="Figma Icon" />
+                </div>
+                <div class="text-black text-2xl font-semibold font-['Roboto']">Figma</div>
+            </div>
+            
+            <div class="w-full max-w-xs flex flex-col items-center justify-start h-80 bg-orange-100 rounded-[105px] pt-12 pb-6 shadow-lg">
+                <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center mb-6">
+                    <img class="w-24 h-24 rounded-[5px]" src="aset/image 2.png" alt="Afinity Icon" />
+                </div>
+                <div class="text-black text-2xl font-semibold font-['Roboto']">Afinity</div>
+            </div>
+            
+            <div class="w-full max-w-xs flex flex-col items-center justify-start h-80 bg-orange-100 rounded-[105px] pt-12 pb-6 shadow-lg">
+                <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center mb-6">
+                    <img class="w-32 h-20" src="aset/image 3.png" alt="Dribbble Icon" />
+                </div>
+                <div class="text-black text-2xl font-semibold font-['Roboto']">Dribbble</div>
+            </div>
+            
+            <div class="w-full max-w-xs flex flex-col items-center justify-start h-80 bg-orange-100 rounded-[105px] pt-12 pb-6 shadow-lg">
+                <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center mb-6">
+                    <img class="w-32 h-32" src="aset/image 4.png" alt="Vscode Icon" />
+                </div>
+                <div class="text-black text-2xl font-semibold font-['Roboto']">Vscode</div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+</section>
+
+    <!-- Contact Section -->
+<section id="Contact" class="bg-yellow-50 py-20 font-sans min-h-[400px] flex items-center justify-center">
+    <div class="container max-w-6xl mx-auto px-4">
+        
+        <h2 class="text-5xl font-extrabold text-black mb-4">
+            Lets <span class="text-amber-500 italic">Connetc</span> There
+        </h2>
+        <hr class="w-full border-t border-gray-300 mb-12"> 
+        
+        <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-12">
+            
+            <div class="flex items-start">
+                
+                <div class="relative w-full max-w-xs h-60 border-2 border-black shadow-lg">
+                    <iframe
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60011.923714455195!2d140.3659557460377!3d-8.500398934466052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69b53e2c29a12387%3A0x578edb6cfc3c6f21!2sMerauke%2C%20Kec.%20Merauke%2C%20Kabupaten%20Merauke%2C%20Papua%20Selatan!5e1!3m2!1sid!2sid!4v1762860677058!5m2!1sid!2sid"
+                        style="border:0;" 
+                        allowfullscreen=""
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="container mx-auto max-w-4xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
+                    
+                    <div class="flex items-center">
+                        <div class="w-11 h-11 bg-amber-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <img src="aset/insta.png" alt="Instagram Icon" class="w-6 h-6 object-contain">
+                        </div>
+                        <div class="text-black text-base font-normal font-['Noto_Serif_HK'] leading-6 break-all">
+                            : <a href="https://www.instagram.com/_iqs" class="hover:underline">www.instagram.com/_iqmls</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-11 h-11 bg-amber-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <img src="aset/telpon.png" alt="WhatsApp Icon" class="w-6 h-6 object-contain">
+                        </div>
+                        <div class="text-black text-base font-normal font-['Noto_Serif_HK'] leading-6 break-all">
+                            : www.whatsaap.com/+62821 - 4343 - 1146
+                            </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-11 h-11 bg-amber-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <img src="aset/facebook.png" alt="Facebook Icon" class="w-6 h-6 object-contain">
+                        </div>
+                        <div class="text-black text-base font-normal font-['Noto_Serif_HK'] leading-6 break-all">
+                            : <a href="https://www.facebook.com/iqmal.sulaiman" class="hover:underline">www.facebook.com/iqmal sulaiman</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-11 h-11 bg-amber-400 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <img src="aset/git.png" alt="GitHub Icon" class="w-6 h-6 object-contain">
+                        </div>
+                        <div class="text-black text-base font-normal font-['Noto_Serif_HK'] leading-6 break-all">
+                            : <a href="https://www.github.com/iqmals888" class="hover:underline">www.github.com/iqmals888</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>  
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Pilih semua tautan di navbar yang mengarah ke section (dimulai dengan #)
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Mencegah aksi default tautan (melompat langsung)
+                e.preventDefault();
+                
+                // Mendapatkan ID section tujuan dari atribut href
+                const targetId = this.getAttribute('href');
+                
+                // Menemukan elemen section tujuan
+                const targetElement = document.querySelector(targetId);
+                
+                // Offset untuk navbar yang fixed (misal, 96px atau kelas py-6 * 2 + padding/margin/height)
+                const offset = document.querySelector('nav').offsetHeight;
+
+                if (targetElement) {
+                    // Hitung posisi scroll yang disesuaikan
+                    const targetPosition = targetElement.offsetTop - offset;
+                    
+                    // Lakukan smooth scroll ke posisi yang dihitung
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Tambahkan event listener untuk tombol "Hire Me" di Hero Section
+        const hireMeButton = document.querySelector('#hero button'); // Lebih spesifik ke button di section hero
+        if (hireMeButton) {
+            hireMeButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const contactSection = document.querySelector('#Contact');
+                const offset = document.querySelector('nav').offsetHeight;
+                
+                if (contactSection) {
+                    const targetPosition = contactSection.offsetTop - offset;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+/* ======== PENGATURAN DASAR & WARNA ======== */
+:root {
+    --bg-dark: #2D2D3A; /* Latar belakang utama */
+    --bg-footer: #22222B; /* Latar belakang footer sedikit beda */
+    --text-light: #F0F0F0; /* Teks putih */
+    --text-muted: #AAAAAA; /* Teks abu-abu ("- Perkenalan") */
+    --accent-yellow: #FFC94A; /* Garis bawah & tautan */
+    --accent-red: #A91D3A; /* Glow di belakang gambar */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Penampung utama untuk memberi batas */
+main,
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    /* 2rem = 32px */
+}
+
+/* ======== HEADER / NAVIGASI ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Angka tinggi agar selalu di atas konten lain */
+    width: 100%;
+}
+
+.logo a {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.logo-image {
+    display: block; /* Agar bisa diberi lebar/tinggi */
+    width: 150px;   /* Sesuaikan dengan lebar logo Anda */
+    height: 100px;   /* Sesuaikan dengan tinggi logo Anda */
+    background-image: url('image_landingpage/icon_homepage/Mandala3.png'); /* Ganti dengan path gambar logo Anda */
+    background-size: contain; /* Agar gambar pas di dalam elemen tanpa terpotong */
+    background-repeat: no-repeat; /* Jangan mengulang gambar */
+    text-indent: -9999px; /* Sembunyikan teks "MANDALA 3" yang mungkin masih ada (penting untuk SEO/aksesibilitas) */
+    overflow: hidden; /* Pastikan teks yang disembunyikan tidak terlihat */
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 2rem;
+    /* Jarak antar menu */
+}
+
+.navbar nav a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--text-light);
+}
+
+/* ======== BAGIAN TEAM MEMBER ======== */
+.team-member {
+    display: flex;
+    align-items: stretch;
+    /* Diubah dari 'center' ke 'stretch' agar layout tidak rusak */
+    gap: 2rem;
+    margin-top: 4rem;
+    min-height: 80vh;
+    /* Tinggi agar pas di layar */
+}
+
+/* === INI YANG BARU SAJA KITA UBAH === */
+.member-info {
+    flex: 1;
+    /* Bagi jadi 2 kolom sama rata */
+    /* Tambahan untuk rata tengah vertikal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.member-showcase {
+    flex: 1;
+    /* Bagi jadi 2 kolom sama rata */
+}
+
+/* Tampilan dibalik untuk Mario */
+.team-member.reverse {
+    flex-direction: row-reverse;
+}
+
+/* --- Kolom Info Teks --- */
+.member-info span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.member-info p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    max-width: 450px;
+    /* Batasi lebar teks */
+}
+
+.details-link {
+    color: var(--accent-yellow);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--text-light);
+}
+
+/* --- Kolom Nama & Gambar --- */
+.member-showcase {
+    position: relative; /* Ini penting untuk 'position: absolute' anak-anaknya */
+}
+
+.member-showcase h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    /* Tambahan untuk menimpa gambar */
+    position: absolute;
+    bottom: 50px;
+    /* Atur jarak dari bawah */
+    right: 0;
+    z-index: 3;
+    /* Teks di tumpukan paling atas (di atas gambar z-index: 2) */
+    text-align: right;
+}
+
+/* Garis bawah kuning */
+.member-showcase h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 6px;
+    background-color: var(--accent-yellow);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    /* Tambahan untuk ikut rata kanan */
+    margin-left: auto;
+}
+
+/* Penampung gambar & glow */
+.image-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    /* Sedikit ke bawah */
+    width: 450px;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Khusus untuk layout terbalik (Mario) */
+.team-member.reverse .image-wrapper {
+    right: auto;
+    left: 0;
+}
+
+.team-member.reverse .member-showcase h2 {
+    text-align: left;
+    /* Teks rata kiri */
+    right: auto;
+    left: 0;
+    /* Teks menempel di kiri */
+}
+
+.team-member.reverse .member-showcase h2::after {
+    margin-left: 0;
+    /* Garis mulai dari kiri */
+    margin-right: auto;
+}
+
+
+.image-wrapper img {
+    position: relative;
+    z-index: 2;
+    /* Gambar di atas glow (tumpukan 2) */
+    max-height: 100%;
+}
+
+/* Efek glow merah */
+.image-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    filter: blur(80px);
+    /* Kunci dari efek glow */
+    opacity: 0.7;
+    z-index: 1;
+    /* Glow di belakang gambar (tumpukan 1) */
+    bottom: 0;
+}
+
+
+/* ======== FOOTER / KONTAK ======== */
+/* Bagian ini akan kembali normal setelah sintaks di atas benar */
+.contact-section {
+    background-color: var(--bg-footer);
+    text-align: center;
+    padding: 6rem 2rem;
+    margin-top: 6rem;
+}
+
+.contact-section h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.contact-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #3A3A4A;
+    /* Warna tombol */
+    color: var(--text-light);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4A4A5A;
+}
+
+
+/* ======== RESPONSIVE (UNTUK HP) ======== */
+@media (max-width: 768px) {
+
+    /* Atur navigasi jadi vertikal */
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Atur layout tim jadi vertikal */
+    .team-member,
+    .team-member.reverse {
+        flex-direction: column-reverse;
+        /* Gambar di atas, teks di bawah */
+        margin-top: 2rem;
+        min-height: auto;
+        text-align: center;
+        /* Pusatkan teks */
+    }
+
+    .member-info p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+        /* Pusatkan ikon sosial */
+    }
+
+    .member-showcase h2 {
+        font-size: 2.5rem;
+        text-align: center !important;
+        /* Paksa center */
+        position: static;
+        /* Kembalikan posisi normal di HP */
+    }
+
+    .member-showcase h2::after {
+        margin: 0.5rem auto;
+        /* Pusatkan garis kuning */
+        /* Tambahan untuk reset dari desktop */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Atur ulang posisi gambar */
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        /* Batasi lebar gambar di HP */
+        height: 400px;
+        bottom: 0;
+        margin: 0 auto;
+    }
+
+    .image-glow {
+        width: 80%;
+        height: 80%;
+    }
+
+    /* Atur ulang kontak */
+    .contact-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+.map-embed {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden; 
+    max-width: 400px; 
+
+    /* === TAMBAHKAN 2 BARIS INI === */
+    margin-left: auto;
+    margin-right: auto;
+}
+}

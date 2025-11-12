@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Mario</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amber: {
+              500: '#FACC15',
+            },
+            zinc: {
+              900: '#18181B',
+              800: '#27272A',
+            },
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-zinc-900 text-gray-300 font-sans">
+
+  <header class="w-full absolute top-0 left-0 z-20">
+    <nav class="container mx-auto max-w-7xl px-8 md:px-16 lg:px-24 py-6 flex justify-between items-center">
+
+      <div class="flex-shrink-0 z-40">
+        <a href="#">
+          <img src="image/Hitam Abu-Abu Abstrak Y2K Streetwear Logo.png" alt="Logo Mandala 3" class="h-12 w-auto  ">
+        </a>
+      </div>
+
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="text-gray-300 hover:text-amber-500 transition-colors">Beranda</a>
+        <a href="#tentang" class="text-gray-300 hover:text-amber-500 transition-colors">Tentang saya</a>
+        <a href="#pengalaman" class="text-gray-300 hover:text-amber-500 transition-colors">Pengalaman</a>
+        <a href="#skill" class="text-gray-300 hover:text-amber-500 transition-colors">Skill</a>
+        <a href="#kontak" class="text-gray-300 hover:text-amber-500 transition-colors">Kontak</a>
+      </div>
+
+      <div class="md:hidden z-40">
+        <button id="hamburger-btn" class="text-white focus:outline-none">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <div id="mobile-menu"
+    class="hidden md:hidden fixed inset-0 bg-zinc-900 z-30 flex flex-col items-center justify-center space-y-8">
+    <a href="#home" class="text-white text-2xl hover:text-amber-500 transition-colors">Beranda</a>
+    <a href="#tentang" class="text-white text-2xl hover:text-amber-500 transition-colors">Tentang saya</a>
+    <a href="#pengalaman" class="text-white text-2xl hover:text-amber-500 transition-colors">Pengalaman</a>
+    <a href="#skill" class="text-white text-2xl hover:text-amber-500 transition-colors">Skill</a>
+    <a href="#kontak" class="text-white text-2xl hover:text-amber-500 transition-colors">Kontak</a>
+  </div>
+
+  <main>
+    <section id="home" class="min-h-screen relative overflow-hidden bg-zinc-900 pt-32 pb-12">
+      <div class="container mx-auto max-w-7xl px-8 md:px-16 lg:px-24 flex flex-col md:flex-row items-center h-full">
+
+        <div class="w-full md:w-7/12 text-center md:text-left">
+
+          <div class="mt-12 md:mt-24">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+              MARIO <br> BENEDIC <br> WALALANGI.
+            </h1>
+            <div class="text-gray-400 text-lg mb-8 space-x-4">
+              <a href="https://instagram.com/mariow0_" target="_blank" rel="noopener noreferrer"
+                class="hover:text-amber-500 transition-colors">INSTAGRAM</a> |
+              <a href="https://facebook.com/max.havelaar.98284" target="_blank" rel="noopener noreferrer"
+                class="hover:text-amber-500 transition-colors">FACEBOOK</a> |
+              <a href="#kontak" class="hover:text-amber-500 transition-colors">WHATSAPP</a> |
+              <a href="https://github.com/Mariow69" target="_blank" rel="noopener noreferrer"
+                class="hover:text-amber-500 transition-colors">GITHUB</a> |
+            </div>
+            <a href="#kontak"
+              class="inline-block border border-amber-500 text-amber-500 font-semibold py-3 px-8 rounded-full hover:bg-amber-500 hover:text-zinc-900 transition-colors">
+              Kontak Saya
+            </a>
+          </div>
+
+          <div class="w-full mt-12 md:mt-16"> <span
+              class="bg-amber-500 text-zinc-900 font-bold text-lg tracking-wider inline-block py-1 px-4 mb-4">
+              INTRODUCTION
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+              MAHASISWA SISTEM INFORMASI
+            </h2>
+            <p class="text-gray-400 text-lg max-w-xl mx-auto md:mx-0">
+              Saya adalah mahasiswa Sistem Informasi yang dinamis dengan ketertarikan kuat pada pengembangan perangkat
+              lunak dan manajemen proyek. Saya bersemangat membangun dan mengelola sistem yang memberikan dampak nyata
+              bagi pengguna dan bisnis.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="w-full md:w-5/12 flex justify-center items-center mt-12 md:mt-0">
+          <div style="width: 452px; height: 488px; position: relative">
+            <img
+              style="width: 314px; height: 421px; left: 79px; top: 67px; position: absolute; box-shadow: 0px 4px 31px rgba(0, 0, 0, 0.25)"
+              src="image/DSC07735.ARW-Photoroom.png" />
+            <div
+              style="width: 452px; height: 452px; left: 0px; top: 0px; position: absolute; opacity: 0.25; background: #4f3b3b; border-radius: 9999px">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="tentang" class="py-20 bg-zinc-800">
+      <div class="container mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
+
+        <div class="text-center mb-16">
+          <span class="bg-amber-500 text-zinc-900 text-3xl font-bold tracking-wider uppercase inline-block py-2 px-6">
+            Tentang Saya
+          </span>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="w-full md:w-1/3 flex justify-center">
+            <img src="image/admin-removebg-preview.png" alt="Mario"
+              class="rounded-lg shadow-xl w-full max-w-sm object-cover">
+          </div>
+          <div class="w-full md:w-2/3 md:pl-12">
+            <p class="text-lg mb-4 text-gray-300">
+              Studi saya di Sistem Informasi telah melatih saya untuk menjadi seorang pemikir sistem. Saya tidak hanya
+              melihat sebuah aplikasi atau database secara terpisah, tapi saya belajar bagaimana semua komponen itu
+              terhubung—mulai dari input data oleh user, proses di server, hingga menjadi laporan di meja manajer.
+              Memahami gambaran besar inilah yang saya kuasai.
+            </p>
+            <p class="text-lg text-gray-300">
+              Saya percaya sistem yang hebat tidak hanya fungsional, tapi juga mudah digunakan. Karena itu, saya sangat
+              tertarik pada titik temu antara sistem dan manusia. Saya mendalami analisis kebutuhan pengguna (user
+              requirement) dan prinsip-prinsip desain UI/UX, karena saya ingin memastikan solusi teknologi yang saya
+              rancang benar-benar menjawab masalah pengguna.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pengalaman" class="py-20 bg-zinc-900">
+      <div class="container mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
+        <div class="text-center mb-16">
+          <span class="bg-amber-500 text-zinc-900 text-3xl font-bold tracking-wider uppercase inline-block py-2 px-6">
+            Pengalaman
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+          <div
+            class="bg-zinc-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <img src="image/screencapture-127-0-0-1-8000-recipes-2025-11-08-19_28_39.png" alt="Aplikasi Kasir Digital"
+              class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-white mb-3">Aplikasi Katalog Resep Digital</h3>
+              <p class="text-gray-400 mb-6">Desain dan prototype aplikasi Katalog Resep Digital untuk UMKM.</p>
+              <a href="#" id="open-resep-modal"
+                class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                Info Selengkapnya
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-zinc-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <img src="image/screencapture-localhost-8080-UTS-Nomor-1-2025-11-08-19_34_39.png"
+              alt="Website Top Up Game Sederhana" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-white mb-3">Website Top Up Game Sederhana</h3>
+              <p class="text-gray-400 mb-6">Pengembangan front-end dan back-end untuk website Top Up Game Sederhana.</p>
+              <a href="#" id="open-sertifikat-modal"
+                class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">
+                Info Selengkapnya
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skill" class="py-20 bg-zinc-800">
+  <div class="container mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
+    <div class="text-center mb-4">
+      <span class="bg-amber-500 text-zinc-900 text-3xl font-bold tracking-wider uppercase inline-block py-2 px-6">
+        Skill
+      </span>
+    </div>
+    <h3 class="text-4xl font-bold text-white text-center mt-2 mb-16">
+      Tools & Teknologi Yang Saya Kuasai
+    </h3>
+
+    <div class="space-y-12">
+
+      <div>
+        <h4 class="text-xl font-semibold text-amber-500 mb-6">BAHASA & DATABASE</h4>
+        <div class="flex flex-wrap justify-center md:justify-start gap-8">
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/4373229_html5_logo_logos_icon.png" alt="HTML Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">HTML</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/317756_badge_css_css3_achievement_award_icon.png" alt="CSS Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">CSS</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/4373217_java_logo_logos_icon.png" alt="Java Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">JAVA</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/652581_code_command_develop_javascript_language_icon.png" alt="JavaScript Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">JavaScript</p>
+          </div>
+
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/4518869_php_icon.png" alt="PHP Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">PHP</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/sql-server_3161133.png" alt="SQL Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">SQL</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xl font-semibold text-amber-500 mb-6">FRAMEWORK & LIBRARY</h4>
+        <div class="flex flex-wrap justify-center md:justify-start gap-8">
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/8666409_laravel_icon.png" alt="Laravel Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">Laravel</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/2993773_git_social media_icon.png" alt="Git Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">GIT</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/8666135_bootstrap_icon.png" alt="Bootstrap Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">Bootstrap</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xl font-semibold text-amber-500 mb-6">SOFTWARE & DESAIN</h4>
+        <div class="flex flex-wrap justify-center md:justify-start gap-8">
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/7564187_figma_logo_brand_icon.png" alt="Figma Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">Figma</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/1012821_code_development_logo_mysql_icon.png" alt="MySQL Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">MySQL</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/visual-basic_5968389.png" alt="VS Code Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">VS Code</p>
+          </div>
+          
+          <div class="flex flex-col items-center w-24">
+            <div
+              class="h-20 w-20 bg-zinc-700 rounded-lg flex items-center justify-center font-bold text-white text-lg shadow-md">
+              <img src="image/icons8-apache-netbeans-480.png" alt="Netbeans Logo" class="w-12 h-12 object-contain">
+            </div>
+            <p class="mt-2 text-gray-300">Netbeans</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="kontak" class="py-20 bg-zinc-900">
+      <div class="container mx-auto max-w-3xl px-8">
+        <div class="text-center mb-4">
+          <span class="bg-amber-500 text-zinc-900 text-3xl font-bold tracking-wider uppercase inline-block py-2 px-6">
+            Kontak Saya
+          </span>
+        </div>
+        <h3 class="text-4xl font-bold text-white text-center mt-2 mb-16">
+          Cara Hubungi Saya
+        </h3>
+
+        <div class="flex flex-col items-center space-y-5">
+
+          <a href="tel:+621248533141"
+            class="flex items-center bg-zinc-800 p-4 rounded-lg w-full max-w-lg hover:bg-zinc-700 transition-colors">
+            <span class="w-8 flex-shrink-0 flex justify-center">
+              <svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.081l-3.923-.981a1.125 1.125 0 00-1.21.39l-1.12 1.342a1.125 1.125 0 01-1.342.39l-3.923-.981a1.125 1.125 0 01-.39-1.21l1.342-1.12a1.125 1.125 0 00.39-1.21l-.981-3.923a1.125 1.125 0 00-1.081-.852H2.25A2.25 2.25 0 000 4.5v.75z" />
+              </svg>
+            </span>
+            <span class="ml-4 text-gray-300">+621248533141</span>
+          </a>
+
+          <a href="mailto:mariowalalangi2103@gmail.com"
+            class="flex items-center bg-zinc-800 p-4 rounded-lg w-full max-w-lg hover:bg-zinc-700 transition-colors">
+            <span class="w-8 flex-shrink-0 flex justify-center">
+              <svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.86 0l-7.5-4.615A2.25 2.25 0 013 6.993V6.75z" />
+              </svg>
+            </span>
+            <span class="ml-4 text-gray-300">mariowalalangi2103@gmail.com</span>
+          </a>
+
+          <a href="https://instagram.com/mariow0_" target="_blank" rel="noopener noreferrer"
+            class="flex items-center bg-zinc-800 p-4 rounded-lg w-full max-w-lg hover:bg-zinc-700 transition-colors">
+            <span class="w-8 flex-shrink-0 flex justify-center">
+              <svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.229-1.664 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85C2.253 3.854 3.769 2.304 7.02 2.155 8.284 2.097 8.665 2.085 12 2.085m0-1.808C8.598 0 8.21.012 6.948.07c-3.554.162-6.115 2.723-6.277 6.277C.012 8.21 0 8.598 0 12s.012 3.79.07 5.052c.162 3.554 2.723 6.115 6.277 6.277 1.262.058 1.64.07 5.053.07s3.79-.012 5.053-.07c3.554-.162 6.115-2.723 6.277-6.277.058-1.262.07-1.64.07-5.053s-.012-3.79-.07-5.053C21.747 2.784 19.186.223 15.632.06 14.37.012 13.988 0 12 0zm0 4.868c-3.935 0-7.132 3.197-7.132 7.132s3.197 7.132 7.132 7.132 7.132-3.197 7.132-7.132S15.935 4.868 12 4.868zM12 17.5a5.5 5.5 0 110-11 5.5 5.5 0 010 11zm6.5-11.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
+              </svg>
+            </span>
+            <span class="ml-4 text-gray-300">@mariow0_</span>
+          </a>
+
+          <a href="https://facebook.com/max.havelaar.98284" target="_blank" rel="noopener noreferrer"
+            class="flex items-center bg-zinc-800 p-4 rounded-lg w-full max-w-lg hover:bg-zinc-700 transition-colors">
+            <span class="w-8 flex-shrink-0 flex justify-center">
+              <svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.24 0-1.63.772-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+              </svg>
+            </span>
+            <span class="ml-4 text-gray-300">Mario Benedic</span> </a>
+
+          <a href="https://github.com/Mariow69" target="_blank" rel="noopener noreferrer"
+            class="flex items-center bg-zinc-800 p-4 rounded-lg w-full max-w-lg hover:bg-zinc-700 transition-colors">
+            <span class="w-8 flex-shrink-0 flex justify-center">
+              <svg class="w-6 h-6 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.085 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </span>
+            <span class="ml-4 text-gray-300">github.com/Mariow69</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <div id="modal-resep"
+    class="hidden fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-zinc-800 rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
+      <button id="close-resep-modal"
+        class="absolute -top-3 -right-3 bg-amber-500 text-zinc-900 rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">&times;</button>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Aplikasi Katalog Resep Digital</h3>
+      <img src="image/screencapture-127-0-0-1-8000-recipes-2025-11-08-19_28_39.png" alt="Aplikasi Katalog Resep"
+        class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-gray-300">
+        <strong>Deskripsi Detail:</strong><br>
+        Aplikasi ini dirancang untuk mengelola dan memamerkan resep secara digital.
+        Proyek ini dikerjakan menggunakan VS Code dan menggunakan Framework Laravel.
+        <br><br>
+        <strong>Teknologi yang digunakan:</strong>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">Laravel</span>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">HTML</span>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">CSS</span>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">VS Code</span>
+      </p>
+    </div>
+  </div>
+
+  <div id="modal-sertifikat"
+    class="hidden fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-zinc-800 rounded-lg shadow-xl max-w-2xl w-full p-6 relative">
+      <button id="close-sertifikat-modal"
+        class="absolute -top-3 -right-3 bg-amber-500 text-zinc-900 rounded-full h-8 w-8 flex items-center justify-center font-bold text-lg">&times;</button>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Website Top Up Game Sederhana</h3>
+      <img src="image/screencapture-localhost-8080-UTS-Nomor-1-2025-11-08-19_34_39.png"
+        alt="Website Top Up Game Sederhana" class="w-full h-64 object-cover rounded-md mb-4">
+      <p class="text-gray-300">
+        <strong>Deskripsi Detail:</strong><br>
+        Proyek ini adalah pengembangan front-end untuk sistem manajemen sertifikat internal. Tujuannya adalah membuat
+        antarmuka yang bersih dan responsif untuk mengelola, mencari, dan memvalidasi data sertifikat.
+        <br><br>
+        <strong>Teknologi yang digunakan:</strong>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">HTML</span>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">Bootstrap</span>
+        <span class="bg-zinc-700 text-amber-500 px-2 py-1 rounded-md text-sm">JavaScript</span>
+      </p>
+    </div>
+  </div>
+  <footer class="bg-zinc-900 py-20">
+    <div class="container mx-auto max-w-7xl px-8 md:px-16 lg:px-24">
+
+      <div class="flex flex-col gap-12">
+
+        <div class="w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60011.923714455195!2d140.3659557460377!3d-8.500398934466052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69b53e2c29a12387%3A0x578edb6cfc3c6f21!2sMerauke%2C%20Kec.%20Merauke%2C%20Kabupaten%20Merauke%2C%20Papua%20Selatan!5e1!3m2!1sid!2sid!4v1762860677058!5m2!1sid!2sid"
+            width="100%" height="100%" class="min-h-[300px] md:min-h-[450px]" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="w-full flex flex-col items-center">
+
+          <div class="flex space-x-8 mb-6">
+            <a href="#home" class="text-gray-400 hover:text-amber-500 text-2xl transition-colors">[Home]</a>
+            <a href="https://facebook.com/max.havelaar.98284" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-amber-500 text-2xl transition-colors">[Facebook]</a>
+            <a href="https://instagram.com/mariow0_" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-amber-500 text-2xl transition-colors">[Instagram]</a>
+            <a href="https://github.com/Mariow69" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-amber-500 text-2xl transition-colors">[GitHub]</a>
+          </div>
+
+          <p class="text-gray-500 text-sm mt-10 text-center w-full">
+            © 2025 MARIO BENEDIC WALALANGI. ALL RIGHTS RESERVED
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Ambil semua elemen yang diperlukan
+    const resepModal = document.getElementById('modal-resep');
+    const sertifikatModal = document.getElementById('modal-sertifikat');
+
+    const openResepBtn = document.getElementById('open-resep-modal');
+    const closeResepBtn = document.getElementById('close-resep-modal');
+
+    const openSertifikatBtn = document.getElementById('open-sertifikat-modal');
+    const closeSertifikatBtn = document.getElementById('close-sertifikat-modal');
+
+    // Fungsi generik untuk membuka modal
+    function openModal(modal) {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Mencegah scrolling di belakang modal
+    }
+
+    // Fungsi generik untuk menutup modal
+    function closeModal(modal) {
+      modal.classList.add('hidden');
+      // Hanya kembalikan scroll jika menu mobile juga tertutup
+      if (mobileMenu.classList.contains('hidden')) {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Event listener untuk Modal Resep
+    openResepBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Mencegah link '#' melompat ke atas
+      openModal(resepModal);
+    });
+    closeResepBtn.addEventListener('click', () => closeModal(resepModal));
+
+    // Event listener untuk Modal Sertifikat
+    openSertifikatBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Mencegah link '#' melompat ke atas
+      openModal(sertifikatModal);
+    });
+    closeSertifikatBtn.addEventListener('click', () => closeModal(sertifikatModal));
+
+    // Menutup modal jika klik di luar area konten (di overlay)
+    window.addEventListener('click', (e) => {
+      if (e.target == resepModal) {
+        closeModal(resepModal);
+      }
+      if (e.target == sertifikatModal) {
+        closeModal(sertifikatModal);
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
